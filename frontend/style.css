@@ -418,15 +418,15 @@ select:focus{
     border:1px solid #e5e5e5;
     border-radius:10px;
     overflow:hidden;
-    max-width:300px;
+    max-width:350px;
 }
 
 .result-card-image img{
     width:100%;
     height:auto;
     display:block;
-    max-height:250px;
-    object-fit:cover;
+    max-height:350px;
+    object-fit:contain;
 }
 
 /* ================= DESCRIPTION SECTIONS ================= */
