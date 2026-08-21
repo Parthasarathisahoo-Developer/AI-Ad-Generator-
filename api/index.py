@@ -44,12 +44,14 @@ app.add_middleware(
 )
 
 @app.get("/")
+@app.get("/api")
 def home():
     logger.info("Health check hit")
     return {
         "message": "AI Advertisement Generator API is running"
     }
 
+@app.post("/analyze")
 @app.post("/api/analyze")
 async def analyze_image(
     image: UploadFile = File(...),

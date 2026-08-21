@@ -7,3 +7,5 @@ poster.jpg
 node_modules/
 .vercel/
 .next/
+
+.vercel
