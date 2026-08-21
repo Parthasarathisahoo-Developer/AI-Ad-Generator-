@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdCraft AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <span>AdCraft AI</span>
+        </div>
+
+        <nav class="nav-links">
+            <span class="nav-link">Home</span>
+            <span class="nav-link">Portfolio</span>
+            <span class="nav-link">Clients</span>
+        </nav>
+
+        <div class="nav-right">
+            <span class="nav-status">
+                ● AI Advertisement Generator
+            </span>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section id="hero" class="hero">
+
+            <div class="hero-ellipse hero-ellipse-one"></div>
+            <div class="hero-ellipse hero-ellipse-two"></div>
+
+            <div class="hero-badge">
+                ✦ AI Powered Advertisement Generator
+            </div>
+
+            <h1>
+                Turn Your Posters Into
+                <span>Smart Advertisements</span>
+            </h1>
+
+            <p>
+                Upload a promotional poster and let AI transform it
+                into a ready-to-use digital advertisement.
+            </p>
+
+            <div class="hero-actions">
+                <span class="btn-dark">Start Creating</span>
+                <span class="btn-light">See How It Works</span>
+            </div>
+
+            <div class="hero-stats">
+                <strong>50+</strong>
+                <span>posters converted into ads</span>
+            </div>
+
+        </section>
+
+
+        <section id="clients" class="clients-strip">
+
+            <div class="clients-title">
+                Worked with <span>50+ businesses</span> across India
+            </div>
+
+            <div class="clients-marquee">
+                <span>✦ AI Powered</span>
+                <span>✦ Instant Copy</span>
+                <span>✦ Social Media Ready</span>
+                <span>✦ Smart Headlines</span>
+                <span>✦ Multi Format</span>
+                <span>✦ Ready to Use</span>
+                <span>✦ AI Powered</span>
+                <span>✦ Instant Copy</span>
+                <span>✦ Social Media Ready</span>
+                <span>✦ Smart Headlines</span>
+                <span>✦ Multi Format</span>
+                <span>✦ Ready to Use</span>
+            </div>
+
+        </section>
+
+
+        <section class="workspace">
+
+            <div id="createPanel" class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Create Advertisement</h2>
+
+                        <p>
+                            Upload your promotional poster
+                        </p>
+                    </div>
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                </div>
+
+
+                <div class="upload-area">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h3>
+                        Upload your poster
+                    </h3>
+
+                    <p>
+                        Drag & drop your image here
+                    </p>
+
+                    <span>
+                        PNG, JPG or JPEG
+                    </span>
+
+                    <label class="browse-btn">
+
+                        Browse Files
+
+                        <input
+                            type="file"
+                            id="imageInput"
+                            accept="image/png,image/jpeg,image/jpg"
+                            hidden
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <div class="format-wrapper">
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <h3>
+                                Advertisement Format
+                            </h3>
+
+                            <p>
+                                Choose where your advertisement will appear
+                            </p>
+
+                        </div>
+
+                        <span>
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="format-grid">
+
+                        <label class="format-card">
+
+                            <input
+                                type="radio"
+                                name="adFormat"
+                                value="Social Media Post"
+                                checked
+                            >
+
+                            <div class="format-content">
+
+                                <div class="format-icon">
+                                    ◉
+                                </div>
+
+                                <strong>
+                                    Social Media
+                                </strong>
+
+                                <small>
+                                    Social media post
+                                </small>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="generateBtn"
+                    class="generate-btn"
+                >
+
+                    <span>✦</span>
+
+                    Generate Copy
+
+                </button>
+
+                <div
+                    id="loading"
+                    class="loading"
+                    style="display: none;"
+                >
+                    Creating your advertisement...
+                </div>
+
+            </div>
+
+
+            <div class="panel preview-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Advertisement Preview
+                        </h2>
+
+                        <p>
+                            Your generated advertisement will appear here
+                        </p>
+
+                    </div>
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="result"
+                    class="preview-area"
+                >
+
+                    <div class="empty-preview">
+
+                        <div class="preview-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Your ad will appear here
+                        </h3>
+
+                        <p>
+                            Upload a poster and generate your
+                            advertisement to see the preview.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="features" class="features">
+
+            <h2 class="features-title">
+                Why AdCraft AI
+            </h2>
+
+            <p class="features-subtitle">
+                Everything you need to turn one poster into high-converting ad copy.
+            </p>
+
+            <div class="features-grid">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            AI Powered
+                        </strong>
+
+                        <p>
+                            Automatically generates advertising content
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Multiple Formats
+                        </strong>
+
+                        <p>
+                            Create ads for different digital platforms
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ↓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ready to Use
+                        </strong>
+
+                        <p>
+                            Copy or start over with a single click
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="cta-section">
+
+            <h2>
+                Ready to Create Your<br>Advertisement?
+            </h2>
+
+            <p>
+                Upload a poster and let AI write the copy for you.
+            </p>
+
+            <span class="btn-dark">Start Creating Now</span>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span>AdCraft AI</span>
+                </div>
+
+                <p>
+                    AdCraft AI is an AI powered advertisement generator that turns promotional posters into ready-to-use digital ad copy.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><span>Home</span></li>
+                    <li><span>Portfolio</span></li>
+                    <li><span>Clients</span></li>
+                    <li><span>Free Tools</span></li>
+                    <li><span>FAQ</span></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>hello@adcraft.ai</p>
+                <p>+91 00000 00000</p>
+                <p>Serving brands across India</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 AdCraft AI. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
