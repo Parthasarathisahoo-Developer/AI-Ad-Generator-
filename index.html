@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AdSpark - Free AI Ad Copy Generator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Ad<span>Spark</span>
+    </div>
+
+    <nav class="nav">
+        <a href="#generator">Generator</a>
+        <a href="#features">Features</a>
+        <a href="#tips">Tips</a>
+
+        <button class="login">
+            Log in
+        </button>
+
+        <button class="signup">
+            Get Started
+        </button>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="tag">
+        Free Ad Copy Generator
+    </div>
+
+    <h1>
+        Write better ads.
+        <span>Get noticed.</span>
+    </h1>
+
+    <p>
+        Upload your poster and let AI generate high-converting
+        ad copy. Get headlines, descriptions and CTAs in seconds.
+    </p>
+
+</section>
+
+
+<!-- ================= GENERATOR ================= -->
+
+<section class="generator-area" id="generator">
+
+<div class="generator">
+
+    <div class="generator-top">
+
+        <h2>
+            Create New Ad
+        </h2>
+
+        <p>
+            Upload a poster image and AI will generate ad copy for you.
+        </p>
+
+    </div>
+
+
+    <div class="form-grid">
+
+        <div class="field full">
+
+            <label>
+                Poster Image
+            </label>
+
+            <div class="upload" id="uploadArea">
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/png,image/jpeg,image/jpg"
+                    hidden
+                >
+                <div class="upload-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <span class="upload-label" id="uploadLabel">Click to upload or drag & drop</span>
+                <span class="upload-hint">PNG, JPG up to 10MB</span>
+            </div>
+
+        </div>
+
+
+        <div class="field full">
+
+            <label>
+                Ad Format
+            </label>
+
+            <div class="format-select">
+                <label class="format-opt selected" data-format="Social Media Post">
+                    <input type="radio" name="adFormat" value="Social Media Post" checked>
+                    <div class="format-inner">
+                        <div class="format-radio"></div>
+                        <div>
+                            <strong>Social Media Post</strong>
+                            <small>Instagram, Facebook, LinkedIn</small>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="generate"
+        id="generateBtn"
+    >
+        Generate Ad Copy
+    </button>
+
+
+    <div class="loading" id="loading">
+
+        <div class="spinner"></div>
+
+        <p>
+            Generating your ad copy...
+        </p>
+
+    </div>
+
+
+    <!-- RESULTS -->
+
+    <div class="results" id="results">
+
+        <div class="result-heading">
+
+            <h2>
+                Generated Ad Copy
+            </h2>
+
+            <button
+                class="regenerate"
+                id="newAdBtn"
+            >
+                Create New Ad
+            </button>
+
+        </div>
+
+
+        <!-- PRIMARY TEXT -->
+
+        <div class="result-group">
+
+            <h3>
+                Primary Text
+            </h3>
+
+            <div id="primaryTextResult"></div>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div class="result-group">
+
+            <h3>
+                Image
+            </h3>
+
+            <div id="imageResult"></div>
+
+        </div>
+
+
+        <!-- HEADLINE -->
+
+        <div class="result-group">
+
+            <h3>
+                Headline
+            </h3>
+
+            <div id="headlineResult"></div>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="result-group">
+
+            <h3>
+                Description
+            </h3>
+
+            <div id="descriptionResult"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY USE ================= -->
+
+<section class="section light" id="features">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>
+            Turn your ideas into stronger advertising
+        </h2>
+
+        <p>
+            Good advertising starts with a clear message.
+            This tool helps you organize your offer and
+            create different angles for your campaign.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="icon">
+                🎯
+            </div>
+
+            <h3>
+                Speak to the right audience
+            </h3>
+
+            <p>
+                Describe who you want to reach and build
+                messaging around their needs, interests
+                and desired outcome.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ✍️
+            </div>
+
+            <h3>
+                Create multiple angles
+            </h3>
+
+            <p>
+                Explore different headlines and descriptions
+                instead of relying on a single version of
+                your advertisement.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ⚡
+            </div>
+
+            <h3>
+                Save writing time
+            </h3>
+
+            <p>
+                Start with structured advertising ideas and
+                refine the versions that best match your
+                brand and campaign.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TIPS ================= -->
+
+<section class="section" id="tips">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>
+            Simple ways to make your ad copy better
+        </h2>
+
+        <p>
+            Use these practical principles when reviewing
+            the advertising copy generated for your campaign.
+        </p>
+
+    </div>
+
+
+    <div class="tips">
+
+        <div class="tip">
+
+            <h3>
+                01. Start with the customer
+            </h3>
+
+            <p>
+                Explain what the customer gets from your
+                product instead of only describing what
+                your business does.
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <h3>
+                02. Highlight the real benefit
+            </h3>
+
+            <p>
+                Focus on a meaningful result, convenience,
+                saving, feature or experience that makes
+                your offer useful.
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <h3>
+                03. Choose relevant search terms
+            </h3>
+
+            <p>
+                Use keywords that actually describe your
+                product and match what potential customers
+                are likely to search for.
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <h3>
+                04. Keep the message clear
+            </h3>
+
+            <p>
+                Avoid unnecessary words and exaggerated
+                claims. A clear message is easier to
+                understand and evaluate.
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <h3>
+                05. Test different versions
+            </h3>
+
+            <p>
+                Compare different headlines and descriptions
+                to discover which message connects best
+                with your audience.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHO IS IT FOR ================= -->
+
+<section class="section light">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>
+            Who can use this tool?
+        </h2>
+
+        <p>
+            Useful for anyone who needs advertising copy
+            without starting from a blank page.
+        </p>
+
+    </div>
+
+
+    <div class="audience">
+
+        <div class="audience-card">
+
+            <h3>
+                📣 Marketing Teams
+            </h3>
+
+            <p>
+                Quickly explore campaign messaging,
+                promotional angles and advertising ideas
+                for different products.
+            </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+            <h3>
+                📱 Social Media Managers
+            </h3>
+
+            <p>
+                Create short promotional messages that
+                can be adapted for social campaigns,
+                promotions and paid advertisements.
+            </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+            <h3>
+                📊 PPC Specialists
+            </h3>
+
+            <p>
+                Generate starting points for search
+                advertising headlines, descriptions,
+                keywords and calls-to-action.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final-cta">
+
+    <h2>
+        Ready to create your next ad?
+    </h2>
+
+    <p>
+        Upload your poster above and let AI generate
+        high-performing ad copy for your campaign.
+    </p>
+
+    <a
+        href="#generator"
+        class="final-button"
+    >
+        Start Generating
+    </a>
+
+</section>
+
+
+<footer>
+
+    © 2026 AdSpark · Free Advertising Copy Generator
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
